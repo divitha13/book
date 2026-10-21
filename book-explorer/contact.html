@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Book Explorer: search millions of books using the free Open Library API.">
+  <title>Contact | Book Explorer</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Book Explorer</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <h1>Contact</h1>
+    <p>Found a bug or have an idea? Send feedback below.</p>
+    <form id="feedback-form" class="form" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required maxlength="60">
+      </div>
+      <div class="field">
+        <label for="email">Email <span class="hint">(optional)</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" maxlength="100">
+      </div>
+      <div class="field">
+        <label for="message-text">Message</label>
+        <textarea id="message-text" name="message" rows="5" required maxlength="500" aria-describedby="msg-hint"></textarea>
+        <span id="msg-hint" class="hint">Up to 500 characters.</span>
+      </div>
+      <button class="btn" type="submit" id="submit-btn">Send feedback</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <h2>Recent feedback</h2>
+    <p id="list-status" role="status" aria-live="polite"></p>
+    <ul id="feedback-list" class="feedback-list"></ul>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Book data from <a href="https://openlibrary.org">Open Library</a>. Built as a second-year web project.</p>
+    </div>
+  </footer>
+  <script src="js/config.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
